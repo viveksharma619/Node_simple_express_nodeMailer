@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  .container
+    h1 Please fill the contact form...
+    form.form-signin(action="contact/send", method="post")
+      .form-group
+        label Name
+        input.form-control(type='text',name='name',placeholder='Please enter your name')
+      .form-group
+        label Email
+        input.form-control(type='email', name='email', placeholder='Enter the Email Address')
+      .form-group
+        label Message
+        textarea.form-control(name='message',placeholder='Enter the messasge...')
+      button.btn.btn-default(type='submit') Submit
